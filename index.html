@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<script>
+  // function check(){
+  //   alert("hellow");
+  // }
+  function getvalue(){
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+    var first = document.getElementById("first").value;
+    
+     var last=document.getElementById("last").value;
+     var email=document.getElementById("email").value;
+     var organization=document.getElementById("organization").value;
+     var region=document.getElementById("region").value;
+     var industry=document.getElementById("industry").value;
+    var area=document.getElementById("area").value;
+    var checkbox=document.getElementById("checkbox").checked;
+     var checkbox1=document.getElementById("checkbox1").checked;
+     
+     
+     
+
+    
+
+    first=first.trim()
+    last=last.trim()
+    email=email.trim()
+    organization=organization.trim()
+    region=region.trim()
+    industry=industry.trim()
+    
+    area=area.trim()
+    
+    
+  
+   if(first=="" ||last=="" ||email=="" ||organization=="" ||region=="" ||industry=="" ||
+  area=="" ||checkbox==false ||checkbox1==false ){
+
+    if(first=="" && last=="" && email=="" && organization=="" && region=="" && industry=="" &&
+  area=="" &&checkbox==false && checkbox1==false ){
+     alert("All fields are required")
+     return false
+  }
+
+if(first==""){
+  alert("please enter first name")
+  return false
+}
+
+if(last==""){
+  alert("please enter last name")
+  return false
+}
+
+if(email==""){
+  alert("please enter email")
+  return false
+}
+if(!emailRegex.test(email)){
+  alert("please enter valid email")
+  return false
+
+}
+
+
+if(organization==""){
+  alert("please enter organization name")
+  return false
+}
+
+if(region==""){
+  alert("please enter region name")
+  return false
+}
+
+if(industry==""){
+  alert("please enter industry name")
+  return false
+}
+
+if(area==""){
+  alert("please enter area name")
+  return false
+}
+
+if(checkbox==false){
+  alert("please select checkbox")
+  return false
+}
+
+if(checkbox1==false){
+  alert("please select checkbox1")
+  return false
+}
+}
+else{
+  alert("all good")
+  return true
+}
+return false
+
+  
+  
+}
+
+</script>
+  <div class="outer">
+    <img src="man.png" width="35%"style="float:right;">
+<div class="inner">
+   <b>
+    <h2>REQUEST FOR SERVICES<br></h2>
+    </b>
+   <h2> we've driven growth and purposeful transformation across<br>
+    every industry and we're excited to build on your belief.Tell<br>
+    us a bit more about yourself,so we can get the ball rolling.</h2><br><br><br>
+  
+  <b> First Name*</b><br>
+  <input type="text" id="first" placeholder="First Name">
+  
+  &nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  <b> Last Name*</b><input type="text" id="last"><br><br>
+
+   <b>Email*</b><br><input type="email" id="email">&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;
+
+  <b> Organization*</b>
+   <input type="text" id="organization"><br><br>
+
+   <b>Region*</b><br>
+   <select class="region" id="region">
+    <option value="Asia Pacific">Asia Pacific</option>
+    <option value="Australia and Zealand">Australia and Zealand</option>
+    <option value="Europe">Europe</option>
+    <option value="India">India</option>
+    <option value="Latin America">Latin America</option>
+   </select><br><br>
+
+   <b>Industry*</b><br>
+   <select class="ee" id="industry">
+    <option value="Banking">Banking</option>
+    <option value="Capital Market">Capital Market</option>
+    <option value="Insurance">Insurance</option>
+    <option value="Healthcare">Healthcare</option>
+    <option value="Life Science">Life Science</option>
+   </select><br><br>
+
+   <b>How can we help you?**<br>
+   <textarea id="area"></textarea></b><br><br>
+
+<input type="checkbox" id="checkbox">
+I consent to processig of my personal data entered above
+ for TCS to contact me.*<br>
+
+ <input type="checkbox" id="checkbox1">
+ I would like to receive details about products, services 
+ and events from TCS.<br><br>
+
+For further details on how your persional
+ data will be processed and how your consent can be managed,
+ refered for the<br> TCS Privacy Notice.<br><br>
+
+ *Mandtory  fields<br><br>
+
+ <button class="button"   onclick="return getvalue()">Send</button>
+</div>
+  </div>  
+</body>
+</html>
